@@ -20,7 +20,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "🤖 FIB Bot работает! Время UTC, keep-alive каждые 14 мин"
+    return "🤖 Bot работает! Время UTC, keep-alive каждые 14 мин"
 
 
 def get_job_name(job):
@@ -347,6 +347,7 @@ if __name__ == "__main__":
         run_scheduler()
     except Exception as e:
         logger.error(f"💀 Критическая ошибка: {e}")
+
 
 
 
