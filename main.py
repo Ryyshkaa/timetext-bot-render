@@ -1,5 +1,5 @@
 """
-🤖 FIB BOT - Исправленная версия для Render
+🤖 BOT - Исправленная версия для Render
 С правильным UTC временем и keep-alive
 """
 
@@ -303,13 +303,13 @@ def setup_schedule():
 # ===================== ОСНОВНОЙ ПЛАНИРОВЩИК =====================
 def run_scheduler():
     """Основной цикл бота"""
-    logger.info("🚀 FIB Bot запущен (UTC время)")
+    logger.info("🚀 Bot запущен (UTC время)")
     
     # Настраиваем расписание
     setup_schedule()
     
     # Отправляем тестовое сообщение
-    send_webhook("🤖 FIB Bot перезапущен с правильным UTC временем", "Система")
+    send_webhook("🤖 Bot перезапущен с правильным UTC временем", "Система")
     
     # Основной цикл
     while True:
@@ -347,6 +347,7 @@ if __name__ == "__main__":
         run_scheduler()
     except Exception as e:
         logger.error(f"💀 Критическая ошибка: {e}")
+
 
 
 
