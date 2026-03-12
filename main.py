@@ -51,7 +51,7 @@ def get_next_messages():
 # ===================== ЗАГРУЗКА КОНФИГА =====================
 load_dotenv()
 
-WEBHOOK_URL = os.getenv("WEBHOOK_URL", "https://discord.com/api/webhooks/1467255626240495740/Nk1PW-RU2f3ORjQd4Hmy-Jgc_1NZtw4Z2lXakfgbHjDb5ezziVgvGi75tsdriOdP7DfG")
+WEBHOOK_URL = os.getenv("WEBHOOK_URL", "-")
 
 ROLES = {
     "FIB": os.getenv("ROLE_FIB", "1242210100584910858"),
@@ -347,6 +347,7 @@ if __name__ == "__main__":
         run_scheduler()
     except Exception as e:
         logger.error(f"💀 Критическая ошибка: {e}")
+
 
 
 
